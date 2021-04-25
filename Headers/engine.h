@@ -1,0 +1,31 @@
+#ifndef ENGINE_H_INCLUDED
+#define ENGINE_H_INCLUDED
+
+#include <SDL.h>
+
+//Game Instance
+typedef struct {
+    int screenWidth;
+    int screenHeight;
+    SDL_Window* win;
+    SDL_Renderer* renderer;
+    SDL_Surface* screenSurface;
+} GE_GameInstance;
+
+//Initializes the SDL library
+GE_GameInstance* GE_newGameInstance(int screen_width, int screen_height);
+
+//Loading functions (_ indicates internal use only)
+SDL_Surface* _GE_loadSurface(GE_GameInstance *game, const char* path);
+
+//intended function for texture loading
+SDL_Texture* _GE_loadTexture(GE_GameInstance *game, const char* path);
+
+void GE_clearScreen(GE_GameInstance *game);
+
+void GE_renderScreen(GE_GameInstance *game);
+
+//Free the game instance
+void GE_freeGameInstance(GE_GameInstance *game);
+
+#endif // ENGINE_H_INCLUDED
