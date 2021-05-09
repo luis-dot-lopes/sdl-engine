@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "../Headers/engine.h"
 #include <stdio.h>
 
 GE_GameInstance* GE_newGameInstance(int screen_width, int screen_height) {

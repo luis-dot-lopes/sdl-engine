@@ -18,4 +18,8 @@ GE_InputState* GE_initInput();
 //Update input
 void GE_updateInputState(GE_InputState *inputSingleton);
 
+//Free input state
+//For now, it just frees a pointer
+void GE_freeInputState(GE_InputState *inputSingleton);
+
 #endif // INPUT_H_INCLUDED

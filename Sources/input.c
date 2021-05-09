@@ -1,4 +1,4 @@
-#include "input.h"
+#include "../Headers/input.h"
 
 GE_InputState* GE_initInput() {
     GE_InputState *inputSingleton = malloc(sizeof(GE_InputState));
@@ -27,4 +27,8 @@ void GE_updateInputState(GE_InputState *inputSingleton) {
             inputSingleton->keysJustPressed[i] = false;
         }
     }
+}
+
+void GE_freeInputState(GE_InputState *inputSingleton) {
+    free(inputSingleton);
 }

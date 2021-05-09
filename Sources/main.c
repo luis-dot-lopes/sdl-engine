@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "engine.h"
-#include "input.h"
-#include "image.h"
+#include "../Headers/engine.h"
+#include "../Headers/input.h"
+#include "../Headers/image.h"
+#include "../Headers/clock.h"
 
-GE_Image* someImg = NULL;
+GE_Sprites* someImg = NULL;
 
 int main(int argc, char* args[]) {
 
@@ -13,12 +14,15 @@ int main(int argc, char* args[]) {
 
     GE_InputState* in = GE_initInput();
 
+    GE_Clock clock = GE_newClock(60);
+
     //Loading media
-    someImg = GE_loadImage(game, "img.bmp");
+    someImg = GE_loadSprites(game, "img.bmp", 100);
 
     bool gameover = false;
 
     while(!gameover) {
+        GE_clockInitTick(&clock);
 
         GE_updateInputState(in);
         if(in->quit) {
@@ -29,15 +33,21 @@ int main(int argc, char* args[]) {
         //render cycle
         GE_clearScreen(game);
 
-        GE_drawImage(game, 0, 0, someImg);
+        GE_drawSprite(game, 0, 0, someImg);
 
         GE_renderScreen(game);
+
+        GE_clockEndTick(&clock);
     }
 
     //free resources
-    GE_freeImage(someImg);
+    GE_freeSprites(someImg);
 
     someImg = NULL;
+
+    GE_freeInputState(in);
+
+    in = NULL;
 
     GE_freeGameInstance(game);
 
