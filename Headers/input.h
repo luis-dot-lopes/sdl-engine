@@ -7,10 +7,10 @@
 
 //Exposes mouse buttons
 typedef enum {
-    GE_MOUSE_NONE,
-    GE_MOUSE_RIGHT,
-    GE_MOUSE_MIDDLE,
-    GE_MOUSE_LEFT,
+    GE_MOUSE_NONE = -1,
+    GE_MOUSE_RIGHT = SDL_BUTTON(SDL_BUTTON_RIGHT),
+    GE_MOUSE_MIDDLE = SDL_BUTTON(SDL_BUTTON_MIDDLE),
+    GE_MOUSE_LEFT = SDL_BUTTON(SDL_BUTTON_LEFT),
 } MouseButton;
 
 typedef struct {
