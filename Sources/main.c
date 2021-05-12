@@ -21,6 +21,8 @@ int main(int argc, char* args[]) {
 
     bool gameover = false;
 
+    int x = 0, y = 0;
+
     while(!gameover) {
         GE_clockInitTick(&clock);
 
@@ -33,7 +35,14 @@ int main(int argc, char* args[]) {
         //render cycle
         GE_clearScreen(game);
 
-        GE_drawSprite(game, 0, 0, someImg);
+        if(in->mouseButton == GE_MOUSE_RIGHT) {
+            x = in->mouseX;
+            y = in->mouseY;
+        }
+
+        GE_drawSprite(game, x, y, someImg, 0);
+
+        printf("%d %d\n", in->mouseX, in->mouseY);
 
         GE_renderScreen(game);
 
