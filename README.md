@@ -8,12 +8,11 @@ Funções:
 - Carregamento e desenho de imagens ou sprites;
 - Initialização do SDL;
 - Medição do tempo e funções para estabelecer clock fixo;
-- Trato do input do teclado.
+- Trato do input do teclado e mouse.
 
 O que será adicionado:
 
 - Colisões entre objetos;
-- Input do mouse;
 - Física.
 
 English version:
@@ -26,10 +25,9 @@ Functions:
 - Loading and drawing images or sprites;
 - Initializing SDL;
 - Measuring time and fixing FPS;
-- Handling keyboard input.
+- Handling keyboard and mouse input.
 
 Planned features:
 
 - Collisions between objects;
-- Mouse input;
 - Physics.
