@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <SDL.h>
 #include "../Headers/engine.h"
 #include "../Headers/input.h"
 #include "../Headers/image.h"
 #include "../Headers/clock.h"
+#include "../Headers/shapes.h"
 
 GE_Sprites* someImg = NULL;
 
@@ -40,7 +42,13 @@ int main(int argc, char* args[]) {
             y = in->mouseY;
         }
 
-        GE_drawSprite(game, x, y, someImg, 0);
+        GE_Rect rect = { (double)x, (double)y, 10.0, 10.0 };
+
+        SDL_SetRenderDrawColor(game->renderer, 255, 0, 0, 255);
+
+        GE_Rect_draw(game, rect);
+
+        SDL_SetRenderDrawColor(game->renderer, 0, 0, 0, 255);
 
         printf("%d %d\n", in->mouseX, in->mouseY);
 
