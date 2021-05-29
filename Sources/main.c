@@ -42,24 +42,18 @@ int main(int argc, char* args[]) {
             y = in->mouseY;
         }
 
-        GE_Rect rect = { (double)x, (double)y, 30.0, 30.0 };
-        GE_Rect rect2 = { 15, 15, 30, 30 };
+        GE_Line line1 = { (double)x, (double)y, 30.0, 30.0 };
+        GE_Line line2 = { 100, 80, 50, 70 };
 
         SDL_SetRenderDrawColor(game->renderer, 255, 0, 0, 255);
 
-        GE_Rect_draw(game, rect);
+        GE_Line_draw(game, line1);
 
-        GE_Rect_draw(game, rect2);
-
-        GE_Rect rect3 = GE_Rect_intersection(rect, rect2);
-
-        SDL_SetRenderDrawColor(game->renderer, 0, 255, 0, 255);
-
-        GE_Rect_fill(game, rect3);
+        GE_Line_draw(game, line2);
 
         SDL_SetRenderDrawColor(game->renderer, 0, 0, 0, 255);
 
-        printf("%d\n", GE_Rect_collided(rect, rect2));
+        printf("%d\n", GE_Line_intersect(line1, line2));
 
         GE_renderScreen(game);
 
