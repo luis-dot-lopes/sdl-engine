@@ -21,6 +21,11 @@ GE_Rect GE_Rect_intersection(GE_Rect rect1, GE_Rect rect2) {
 }
 
 void GE_Rect_draw(GE_GameInstance *game, GE_Rect rect) {
-    SDL_Rect sdl_rect = { (int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height};
+    SDL_Rect sdl_rect = { (int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height };
     SDL_RenderDrawRect(game->renderer, &sdl_rect);
+}
+
+void GE_Rect_fill(GE_GameInstance *game, GE_Rect rect) {
+    SDL_Rect sdl_rect = { (int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height };
+    SDL_RenderFillRect(game->renderer, &sdl_rect);
 }
