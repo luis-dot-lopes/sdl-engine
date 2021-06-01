@@ -13,6 +13,7 @@ Funções:
 O que será adicionado:
 
 - Colisões entre objetos;
+- Cores;
 - Física.
 
 English version:
@@ -30,4 +31,5 @@ Functions:
 Planned features:
 
 - Collisions between objects;
+- Colors;
 - Physics.
