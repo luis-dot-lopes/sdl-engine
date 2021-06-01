@@ -51,7 +51,7 @@ int main(int argc, char* args[]) {
 
         GE_Line_draw(game, line2);
 
-        GE_changeColor(game->renderer, 0, 0, 0, 255);
+        GE_changeColor(game, 0, 0, 0, 255);
 
         printf("%d\n", GE_Line_intersect(line1, line2));
 

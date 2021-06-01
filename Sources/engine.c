@@ -84,7 +84,7 @@ SDL_Texture* _GE_loadTexture(GE_GameInstance *game, const char* path) {
 }
 
 void GE_changeColor(GE_GameInstance *game, int r, int g, int b, int a) {
-    SDL_SetRenderDrawColor(game->renderer, 255, 0, 0, 255);
+    SDL_SetRenderDrawColor(game->renderer, r, g, b, a);
 }
 
 void GE_clearScreen(GE_GameInstance *game) {
