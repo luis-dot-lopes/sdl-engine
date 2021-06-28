@@ -6,6 +6,7 @@
 #include "../Headers/image.h"
 #include "../Headers/clock.h"
 #include "../Headers/shapes.h"
+#include "../Headers/color.h"
 
 GE_Sprites* someImg = NULL;
 
