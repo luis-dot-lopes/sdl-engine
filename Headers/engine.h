@@ -24,6 +24,10 @@ SDL_Texture* _GE_loadTexture(GE_GameInstance *game, const char* path);
 //Changes the color of the renderer
 void GE_changeColor(GE_GameInstance *game, int r, int g, int b, int a);
 
+//Changes color based on hexadecimal value
+//Receives alpha as separate argument
+void GE_setColorHex(GE_GameInstance *game, int hex_val, int a);
+
 //Clears the renderer
 void GE_clearScreen(GE_GameInstance *game);
 
