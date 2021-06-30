@@ -5,6 +5,7 @@
 #include "../Headers/image.h"
 #include "../Headers/clock.h"
 #include "../Headers/shapes.h"
+#include "../Headers/color.h"
 
 GE_Sprites* someImg = NULL;
 
@@ -44,13 +45,13 @@ int main(int argc, char* args[]) {
         GE_Line line1 = { (double)x, (double)y, 30.0, 30.0 };
         GE_Line line2 = { 100, 80, 50, 70 };
 
-        GE_changeColor(game, 255, 0, 0, 255);
+        GE_setColor(game, GE_RED);
 
         GE_Line_draw(game, line1);
 
         GE_Line_draw(game, line2);
 
-        GE_changeColor(game, 0, 0, 0, 255);
+        GE_setColor(game, GE_BLACK);
 
         printf("%d\n", GE_Line_intersect(line1, line2));
 
