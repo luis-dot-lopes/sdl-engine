@@ -88,12 +88,14 @@ void GE_changeColor(GE_GameInstance *game, int r, int g, int b, int a) {
 }
 
 void GE_setColorHex(GE_GameInstance *game, int hex_val, int a) {
+
     printf("%x: ", hex_val);
     int red = (hex_val & (0xFF << 16)) >> 16;
     int green = (hex_val & (0xFF << 8)) >> 8;
     int blue = hex_val & 0xFF;
     printf("%x %x %x\n", red, green, blue);
     SDL_SetRenderDrawColor(game->renderer, red, green, blue, a);
+
 }
 
 void GE_clearScreen(GE_GameInstance *game) {
