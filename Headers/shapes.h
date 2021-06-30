@@ -3,8 +3,15 @@
 
 #include "engine.h"
 #include <math.h>
-#include <SDL.h>
 #include <stdbool.h>
+
+#ifdef __linux__
+    #include <SDL2/SDL.h>
+#endif
+
+#ifdef _WIN32
+    #include <SDL.h>
+#endif
 
 typedef struct {
     double x, y, width, height;

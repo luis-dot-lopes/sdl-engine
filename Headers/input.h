@@ -3,7 +3,14 @@
 
 #include "input.h"
 #include <stdbool.h>
-#include <SDL.h>
+
+#ifdef __linux__
+    #include <SDL2/SDL.h>
+#endif
+
+#ifdef _WIN32
+    #include <SDL.h>
+#endif
 
 //Exposes mouse buttons
 typedef enum {

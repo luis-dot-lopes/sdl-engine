@@ -1,7 +1,13 @@
 #ifndef TIME_H_INCLUDED
 #define TIME_H_INCLUDED
 
-#include <SDL.h>
+#ifdef __linux__
+    #include <SDL2/SDL.h>
+#endif
+
+#ifdef _WIN32
+    #include <SDL.h>
+#endif
 
 /**
 This clock is based on SDL_Delay.

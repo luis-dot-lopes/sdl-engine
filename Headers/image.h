@@ -2,8 +2,15 @@
 #define IMAGE_H_INCLUDED
 
 #include "engine.h"
-#include <SDL.h>
 #include <stdio.h>
+
+#ifdef __linux__
+    #include <SDL2/SDL.h>
+#endif
+
+#ifdef _WIN32
+    #include <SDL.h>
+#endif
 
 typedef struct {
     SDL_Texture* texture;

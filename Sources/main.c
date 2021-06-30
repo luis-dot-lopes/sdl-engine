@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <SDL.h>
 #include "../Headers/engine.h"
 #include "../Headers/input.h"
 #include "../Headers/image.h"

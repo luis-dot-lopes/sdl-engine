@@ -1,7 +1,13 @@
 #ifndef ENGINE_H_INCLUDED
 #define ENGINE_H_INCLUDED
 
-#include <SDL.h>
+#ifdef __linux__
+    #include <SDL2/SDL.h>
+#endif
+
+#ifdef _WIN32
+    #include <SDL.h>
+#endif
 
 //Game Instance
 typedef struct {
