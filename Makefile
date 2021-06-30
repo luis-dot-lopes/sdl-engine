@@ -1,4 +1,6 @@
 
+#For compilation in Linux
+
 OBJS = Headers/* Sources/*.c Sources/shapes/*.c
 
 CC = gcc
