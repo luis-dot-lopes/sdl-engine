@@ -21,10 +21,18 @@ void GE_setColor(GE_GameInstance *game, GE_Color color) {
     GE_changeColor(game, color.r, color.g, color.b, color.a);
 }
 
-GE_Color GE_lightenColor(GE_Color color) {
-    int d_red = (255 - color.r) / 10;
-    int d_green = (255 - color.g) / 10;
-    int d_blue = (255 - color.b) / 10;
+GE_Color GE_lightenColor(GE_Color color, float percent) {
+    int d_red = (255 - color.r) * percent;
+    int d_green = (255 - color.g) * percent;
+    int d_blue = (255 - color.b) * percent;
 
     return (GE_Color) { color.r + d_red, color.g + d_green, color.b + d_blue, color.a };
+}
+
+GE_Color GE_darkenColor(GE_Color color, float percent) {
+
+    return (GE_Color) { color.r * (1 - percent),
+                        color.g * (1 - percent),
+                        color.b * (1 - percent),
+                        color.a };
 }

@@ -33,7 +33,10 @@ const GE_Color GE_PINK;
 //Changes color based on color struct value
 void GE_setColor(GE_GameInstance *game, GE_Color color);
 
-//Makes the color 10% brighter
-GE_Color GE_lightenColor(GE_Color color);
+//Makes the color brighter by given percentage
+GE_Color GE_lightenColor(GE_Color color, float percent);
+
+//Makes the color darker by given percentage
+GE_Color GE_darkenColor(GE_Color color, float percent);
 
 #endif // COLOR_H_INCLUDED
