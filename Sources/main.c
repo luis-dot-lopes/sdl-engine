@@ -45,9 +45,13 @@ int main(int argc, char* args[]) {
         GE_Line line1 = { (double)x, (double)y, 30.0, 30.0 };
         GE_Line line2 = { 100, 80, 50, 70 };
 
-        GE_setColor(game, GE_RED);
+        GE_Color lineColor = GE_lightenColor(GE_BROWN);
+
+        GE_setColor(game, lineColor);
 
         GE_Line_draw(game, line1);
+
+        GE_setColor(game, GE_BROWN);
 
         GE_Line_draw(game, line2);
 

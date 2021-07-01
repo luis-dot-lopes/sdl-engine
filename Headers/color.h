@@ -13,29 +13,27 @@ typedef struct {
 
 } GE_Color;
 
-//Representation of some colors
-const GE_Color GE_WHITE   = { 0xFF, 0xFF, 0xFF, 0xFF };
-const GE_Color GE_BLACK   = { 0x00, 0x00, 0x00, 0xFF };
-const GE_Color GE_GREY    = { 0x80, 0x80, 0x80, 0xFF };
+//Declaration of some colors constants
+const GE_Color GE_WHITE;
+const GE_Color GE_BLACK;
+const GE_Color GE_GREY;
 
-const GE_Color GE_RED     = { 0xFF, 0x00, 0x00, 0xFF };
-const GE_Color GE_GREEN   = { 0x00, 0xFF, 0x00, 0xFF };
-const GE_Color GE_BLUE    = { 0x00, 0x00, 0xFF, 0xFF };
+const GE_Color GE_RED;
+const GE_Color GE_GREEN;
+const GE_Color GE_BLUE;
 
-const GE_Color GE_YELLOW  = { 0xFF, 0xFF, 0x00, 0xFF };
-const GE_Color GE_CYAN    = { 0x00, 0xFF, 0xFF, 0xFF };
-const GE_Color GE_MAGENTA = { 0xFF, 0x00, 0xFF, 0xFF };
+const GE_Color GE_YELLOW;
+const GE_Color GE_CYAN;
+const GE_Color GE_MAGENTA;
 
-const GE_Color GE_BROWN   = { 0x8B, 0x45, 0x13, 0xFF };
-const GE_Color GE_ORANGE  = { 0xFF, 0x8C, 0x00, 0xFF };
-const GE_Color GE_PINK    = { 0xFF, 0xC0, 0xCB, 0xFF };
+const GE_Color GE_BROWN;
+const GE_Color GE_ORANGE;
+const GE_Color GE_PINK;
 
 //Changes color based on color struct value
-void GE_setColor(GE_GameInstance *game, GE_Color color) {
+void GE_setColor(GE_GameInstance *game, GE_Color color);
 
-    GE_changeColor(game, color.r, color.g, color.b, color.a);
-
-}
-
+//Makes the color 10% brighter
+GE_Color GE_lightenColor(GE_Color color);
 
 #endif // COLOR_H_INCLUDED
