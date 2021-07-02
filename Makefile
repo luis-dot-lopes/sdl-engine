@@ -1,7 +1,7 @@
 
 #For compilation in Linux
 
-OBJS = Headers/* Sources/*.c Sources/shapes/*.c
+OBJS = Sources/*.c Sources/shapes/*.c Headers/*
 
 CC = gcc
 
