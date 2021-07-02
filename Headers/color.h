@@ -14,21 +14,21 @@ typedef struct {
 } GE_Color;
 
 //Declaration of some colors constants
-const GE_Color GE_WHITE;
-const GE_Color GE_BLACK;
-const GE_Color GE_GREY;
+extern const GE_Color GE_WHITE;
+extern const GE_Color GE_BLACK;
+extern const GE_Color GE_GREY;
 
-const GE_Color GE_RED;
-const GE_Color GE_GREEN;
-const GE_Color GE_BLUE;
+extern const GE_Color GE_RED;
+extern const GE_Color GE_GREEN;
+extern const GE_Color GE_BLUE;
 
-const GE_Color GE_YELLOW;
-const GE_Color GE_CYAN;
-const GE_Color GE_MAGENTA;
+extern const GE_Color GE_YELLOW;
+extern const GE_Color GE_CYAN;
+extern const GE_Color GE_MAGENTA;
 
-const GE_Color GE_BROWN;
-const GE_Color GE_ORANGE;
-const GE_Color GE_PINK;
+extern const GE_Color GE_BROWN;
+extern const GE_Color GE_ORANGE;
+extern const GE_Color GE_PINK;
 
 //Changes color based on color struct value
 void GE_setColor(GE_GameInstance *game, GE_Color color);
