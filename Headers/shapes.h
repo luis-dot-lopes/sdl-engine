@@ -13,6 +13,7 @@
     #include <SDL.h>
 #endif
 
+//Represents a rectangle
 typedef struct {
     double x, y, width, height;
 } GE_Rect;
@@ -29,6 +30,7 @@ void GE_Rect_draw(GE_GameInstance *game, GE_Rect rect);
 //Fills a rect
 void GE_Rect_fill(GE_GameInstance *game, GE_Rect rect);
 
+//Represents a line
 typedef struct {
     double x1, y1, x2, y2;
 } GE_Line;
@@ -38,5 +40,10 @@ void GE_Line_draw(GE_GameInstance *game, GE_Line line);
 
 //Detects line intersection
 bool GE_Line_intersect(GE_Line line1, GE_Line line2);
+
+//Represents a point
+typedef struct {
+    double x, y;
+} GE_Point;
 
 #endif // SHAPES_H_INCLUDED

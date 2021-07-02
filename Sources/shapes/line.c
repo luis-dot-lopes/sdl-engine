@@ -6,7 +6,7 @@ void GE_Line_draw(GE_GameInstance *game, GE_Line line) {
 }
 
 //helper function
-int sign(double x) {
+static inline int sign(double x) {
     return (x > 0) - (x < 0);
 }
 

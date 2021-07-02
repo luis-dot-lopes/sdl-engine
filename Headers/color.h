@@ -5,12 +5,7 @@
 
 //A struct representing red, green, blue and alpha values
 typedef struct {
-
-    int r;
-    int g;
-    int b;
-    int a;
-
+    int r, g, b, a;
 } GE_Color;
 
 //Declaration of some colors constants
