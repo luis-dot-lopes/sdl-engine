@@ -10,7 +10,7 @@ static inline int sign(double x) {
     return (x > 0) - (x < 0);
 }
 
-bool GE_Line_intersect(GE_Line line1, GE_Line line2) {
+bool GE_Line_intersect(GE_Line  line1, GE_Line line2) {
 
     double a1 = (line1.y2 - line1.y1) / (line1.x2 - line1.x1);
     double b1 = line1.y1 - line1.x1 * a1;
@@ -20,5 +20,9 @@ bool GE_Line_intersect(GE_Line line1, GE_Line line2) {
 
     return sign((line1.x1 * a2 + b2) - line1.y1) != sign((line1.x2 * a2 + b2) - line1.y2) &&
            sign((line2.x1 * a1 + b1) - line2.y1) != sign((line2.x2 * a1 + b1) - line2.y2);
+
+}
+
+GE_Point GE_Line_getIntersection(GE_Line line1, GE_Line line2) {
 
 }

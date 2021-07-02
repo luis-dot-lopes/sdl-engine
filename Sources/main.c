@@ -42,8 +42,8 @@ int main(int argc, char* args[]) {
             y = in->mouseY;
         }
 
-        GE_Line line1 = { (double)x, (double)y, 30.0, 30.0 };
-        GE_Line line2 = { 100, 80, 50, 70 };
+        GE_Line line1 = { 10, 10, 30, 30 };
+        GE_Line line2 = { 50, 50, 80, 80 };
 
         GE_Color lineColor = GE_darkenColor(GE_RED, 0.5);
 

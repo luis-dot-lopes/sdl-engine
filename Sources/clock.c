@@ -21,7 +21,7 @@ void GE_clockEndTick(GE_Clock *clock) {
         clock->ticks++;
         int millis_ellapsed = SDL_GetTicks() - clock->millis_now;
         clock->millis_now = -1;
-        SDL_Delay(clock->millis_per_tick);
+        SDL_Delay(clock->millis_per_tick - millis_ellapsed);
     } else {
         printf("Clock wasn't initialized for tick\n");
     }

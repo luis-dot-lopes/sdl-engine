@@ -13,6 +13,11 @@
     #include <SDL.h>
 #endif
 
+//Represents a point
+typedef struct {
+    double x, y;
+} GE_Point;
+
 //Represents a rectangle
 typedef struct {
     double x, y, width, height;
@@ -41,9 +46,8 @@ void GE_Line_draw(GE_GameInstance *game, GE_Line line);
 //Detects line intersection
 bool GE_Line_intersect(GE_Line line1, GE_Line line2);
 
-//Represents a point
-typedef struct {
-    double x, y;
-} GE_Point;
+//Returns the intersection point between two lines
+//If the lines don't intersect, returns (-1, -1)
+GE_Point GE_Line_getIntersection(GE_Line line1, GE_Line line2);
 
 #endif // SHAPES_H_INCLUDED

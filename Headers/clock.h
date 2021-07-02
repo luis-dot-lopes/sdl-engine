@@ -9,6 +9,8 @@
     #include <SDL.h>
 #endif
 
+#include <stdio.h>
+
 /**
 This clock is based on SDL_Delay.
 It pauses the execution for the time needed to
