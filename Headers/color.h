@@ -42,4 +42,7 @@ GE_Color GE_lightenColor(GE_Color color, float percent);
 //Makes the color darker by given percentage
 GE_Color GE_darkenColor(GE_Color color, float percent);
 
+//Returns the negative color
+GE_Color GE_negativeColor(GE_Color color);
+
 #endif // COLOR_H_INCLUDED

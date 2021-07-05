@@ -49,7 +49,7 @@ int main(int argc, char* args[]) {
         GE_Line line1 = { (double) x, (double) y, 30, 30 };
         GE_Line line2 = { 80, 80, (double) x2, (double) y2 };
 
-        GE_Color lineColor = GE_darkenColor(GE_RED, 0.5);
+        GE_Color lineColor = GE_negativeColor(GE_RED);
 
         GE_setColor(game, lineColor);
 

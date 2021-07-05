@@ -44,3 +44,10 @@ GE_Color GE_darkenColor(GE_Color color, float percent) {
                         color.b * (1 - percent),
                         color.a };
 }
+
+GE_Color GE_negativeColor(GE_Color color) {
+    return (GE_Color) { 255 - color.r,
+                        255 - color.g,
+                        255 - color.b,
+                        color.a };
+}
