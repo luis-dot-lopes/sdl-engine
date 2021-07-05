@@ -16,6 +16,7 @@ O que será adicionado:
 
 - Colisões entre objetos;
 - Cores;
+- Áudio;
 - Física.
 
 English version:
@@ -36,4 +37,5 @@ Planned features:
 
 - Collisions between objects;
 - Colors;
+- Audio;
 - Physics.
