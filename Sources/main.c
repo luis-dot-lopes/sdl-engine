@@ -24,6 +24,7 @@ int main(int argc, char* args[]) {
     bool gameover = false;
 
     int x = 0, y = 0;
+    int x2 = 100, y2 = 100;
 
     while(!gameover) {
         GE_clockInitTick(&clock);
@@ -40,10 +41,13 @@ int main(int argc, char* args[]) {
         if(in->mouseButton == GE_MOUSE_RIGHT) {
             x = in->mouseX;
             y = in->mouseY;
+        } else if(in->mouseButton == GE_MOUSE_LEFT) {
+            x2 = in->mouseX;
+            y2 = in->mouseY;
         }
 
-        GE_Line line1 = { 10, 10, 30, 30 };
-        GE_Line line2 = { 50, 50, 80, 80 };
+        GE_Line line1 = { (double) x, (double) y, 30, 30 };
+        GE_Line line2 = { 80, 80, (double) x2, (double) y2 };
 
         GE_Color lineColor = GE_darkenColor(GE_RED, 0.5);
 
