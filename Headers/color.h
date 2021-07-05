@@ -17,6 +17,14 @@ extern const GE_Color GE_RED;
 extern const GE_Color GE_GREEN;
 extern const GE_Color GE_BLUE;
 
+extern const GE_Color GE_DARK_RED;
+extern const GE_Color GE_DARK_GREEN;
+extern const GE_Color GE_DARK_BLUE;
+
+extern const GE_Color GE_LIGHT_RED;
+extern const GE_Color GE_LIGHT_GREEN;
+extern const GE_Color GE_LIGHT_BLUE;
+
 extern const GE_Color GE_YELLOW;
 extern const GE_Color GE_CYAN;
 extern const GE_Color GE_MAGENTA;
