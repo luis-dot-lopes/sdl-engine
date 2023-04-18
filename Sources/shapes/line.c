@@ -27,32 +27,37 @@ bool GE_Line_intersect(GE_Line line1, GE_Line line2) {
 
 }
 
-GE_Point GE_Line_getIntersection(GE_Line line1, GE_Line line2) {
+bool GE_Line_getIntersection(GE_Line line1, GE_Line line2, GE_Point *point) {
 
-    double a1 = line1.y2 - line1.y1;
-    double b1 = line1.x1 - line1.x2;
+    if(line1.x1 - line1.x2 == 0) {
+        if(line2.x1 - line2.x2 == 0) {
+            return false;
+        } else if(line2.x1 <= line1.x1 && line1.x1 <= line2.x2) {
+        }
+    }
 
-    double a2 = line2.y2 - line2.y1;
-    double b2 = line2.x1 - line2.x2;
+    double a1 = (line1.y2 - line1.y1) / (line1.x1 - line1.x2);
+    double b1 = line.y1 - a1 * line.x1;
 
-    if(a1 - a2 == 0) {
-        return (GE_Point) {
-            .x = -1.0,
-            .y = -1.0
-        };
+    double a2 = (line2.y2 - line2.y1) / (line2.x1 - line2.x2);
+    double b2 = line2.y1 - a2 * line2.x1;
+
+    if(a1 == a2) {
+        return false;
     }
 
     double x = (b2 - b1) / (a1 - a2);
+
     if(!(line1.x1 <= x && x <= line1.x2 && line2.x1 <= x && x <= line2.x2)) {
-        return (GE_Point) {
-            .x = -1.0,
-            .y = -1.0
-        };
+        return false;
     }
+
     double y = a1 * x + b1;
 
-    return (GE_Point) {
+    *point = (GE_Point) {
         .x = x,
         .y = y
     };
+
+    return true;
 }

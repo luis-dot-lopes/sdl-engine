@@ -46,8 +46,8 @@ void GE_Line_draw(GE_GameInstance *game, GE_Line line);
 //Detects line intersection
 bool GE_Line_intersect(GE_Line line1, GE_Line line2);
 
-//Returns the intersection point between two lines
-//If the lines don't intersect, returns (-1, -1)
-GE_Point GE_Line_getIntersection(GE_Line line1, GE_Line line2);
+//Sets parameter point to the intersection point, if it exists.
+//Returns whether or not the lines intersect
+bool GE_Line_getIntersection(GE_Line line1, GE_Line line2, GE_Point *point);
 
 #endif // SHAPES_H_INCLUDED
