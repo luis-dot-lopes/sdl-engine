@@ -5,6 +5,10 @@ void GE_Line_draw(GE_GameInstance *game, GE_Line line) {
                                        (int) line.x2, (int) line.y2);
 }
 
+bool GE_Line_vertical(GE_Line line) {
+    return line.x1 == line.x2;
+}
+
 //helper function
 static inline int sign(double x) {
     return (x > 0) - (x < 0);
@@ -29,11 +33,11 @@ bool GE_Line_intersect(GE_Line line1, GE_Line line2) {
 
 bool GE_Line_getIntersection(GE_Line line1, GE_Line line2, GE_Point *point) {
 
-    if(line1.x1 - line1.x2 == 0) {
-        if(line2.x1 - line2.x2 == 0) {
-            return false;
-        } else if(line2.x1 <= line1.x1 && line1.x1 <= line2.x2) {
-        }
+    bool lines_intersect = GE_Line_intersect(line1, line2);
+
+    if(!lines_intersect) {
+        return true;
+    } else if() {
     }
 
     double a1 = (line1.y2 - line1.y1) / (line1.x1 - line1.x2);
@@ -58,6 +62,4 @@ bool GE_Line_getIntersection(GE_Line line1, GE_Line line2, GE_Point *point) {
         .x = x,
         .y = y
     };
-
-    return true;
 }

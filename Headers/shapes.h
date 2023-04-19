@@ -43,6 +43,9 @@ typedef struct {
 //Draws a line
 void GE_Line_draw(GE_GameInstance *game, GE_Line line);
 
+//Returns whether or not a line is vertical
+bool GE_Line_vertical(GE_Line line);
+
 //Detects line intersection
 bool GE_Line_intersect(GE_Line line1, GE_Line line2);
 
